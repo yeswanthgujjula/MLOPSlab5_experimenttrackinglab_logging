@@ -1,0 +1,41 @@
+2025-11-18 05:09:29,305 | energy.data | INFO | Attempting to read 'energydata_complete.csv'...
+2025-11-18 05:09:29,471 | energy.data | INFO | Dataset loaded successfully. Shape: (19735, 29)
+2025-11-18 05:09:29,472 | energy.data | INFO | Columns: ['date', 'Appliances', 'lights', 'T1', 'RH_1', 'T2', 'RH_2', 'T3', 'RH_3', 'T4', 'RH_4', 'T5', 'RH_5', 'T6', 'RH_6', 'T7', 'RH_7', 'T8', 'RH_8', 'T9', 'RH_9', 'T_out', 'Press_mm_hg', 'RH_out', 'Windspeed', 'Visibility', 'Tdewpoint', 'rv1', 'rv2']
+2025-11-18 05:09:58,479 | energy.data | INFO | Starting data quality checks and cleaning...
+2025-11-18 05:09:58,504 | energy.data | INFO | Missing values per column:
+date           0
+Appliances     0
+lights         0
+T1             0
+RH_1           0
+T2             0
+RH_2           0
+T3             0
+RH_3           0
+T4             0
+RH_4           0
+T5             0
+RH_5           0
+T6             0
+RH_6           0
+T7             0
+RH_7           0
+T8             0
+RH_8           0
+T9             0
+RH_9           0
+T_out          0
+Press_mm_hg    0
+RH_out         0
+Windspeed      0
+Visibility     0
+Tdewpoint      0
+rv1            0
+rv2            0
+2025-11-18 05:09:58,511 | energy.data | INFO | No negative values in 'Appliances'.
+2025-11-18 05:09:58,512 | energy.data | INFO | Cleaning complete. Final shape: (19735, 29)
+2025-11-18 05:10:24,390 | energy.data | INFO | Starting feature engineering...
+2025-11-18 05:10:24,405 | energy.data | INFO | Created engineered features: ['hour', 'day_of_week', 'is_weekend', 'appliances_roll_mean', 'lights_to_appliances_ratio']
+2025-11-18 05:10:24,411 | energy.data | INFO | Feature matrix shape: (19735, 10), target length: 19735
+2025-11-18 05:11:50,156 | energy.data | INFO | Running simple anomaly check for very high energy usage...
+2025-11-18 05:11:50,162 | energy.data | INFO | No extreme high 'Appliances' values detected (> 5000).
